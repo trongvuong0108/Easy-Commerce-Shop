@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EasyCommerceShop.Domain.Entities;
 
 namespace EasyCommerceShop.Application.BusinessAbstraction
 {
     public interface IProductService
     {
+        Task<IQueryable<Product>> GetAllProductsAsync();
+        Task<IQueryable<Product>> GetAllProductsByCategoryAsync(Category category);
+        Task<IQueryable<Product>> GetAllProductsByBrand(Brand brand);
     }
 }

@@ -3,21 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCommerceShop.WebClient", "EasyCommerceShop.WebClient\EasyCommerceShop.WebClient.csproj", "{E619F1B0-73A1-4A28-AE99-2D21B0A458C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCommerceShop.WebClient", "EasyCommerceShop.WebClient\EasyCommerceShop.WebClient.csproj", "{E619F1B0-73A1-4A28-AE99-2D21B0A458C0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{981126F9-A810-4D01-BCC0-58BD48761351}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1DC19756-A4F9-486B-9B81-56E26146F9C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCommerceShop.Infrastructure", "EasyCommerceShop.Infrastructure\EasyCommerceShop.Infrastructure.csproj", "{68E1C5D6-9F5B-4730-8C54-AAA2599F672B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCommerceShop.Infrastructure", "EasyCommerceShop.Infrastructure\EasyCommerceShop.Infrastructure.csproj", "{68E1C5D6-9F5B-4730-8C54-AAA2599F672B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{C4C40414-0359-4FAA-B454-B512C8B7128D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core Infrastructure", "Core Infrastructure", "{DA8D71A5-142B-4982-BB82-AD9B3FDA4CF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCommerceShop.Domain", "EasyCommerceShop.Domain\EasyCommerceShop.Domain.csproj", "{D2C3BA31-CED7-4D48-91A9-5F6CC630FA9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCommerceShop.Domain", "EasyCommerceShop.Domain\EasyCommerceShop.Domain.csproj", "{D2C3BA31-CED7-4D48-91A9-5F6CC630FA9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCommerceShop.Application", "EasyCommerceShop.Application\EasyCommerceShop.Application.csproj", "{388F9563-8D99-4E40-9CCF-528F18E16457}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCommerceShop.Application", "EasyCommerceShop.Application\EasyCommerceShop.Application.csproj", "{388F9563-8D99-4E40-9CCF-528F18E16457}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
