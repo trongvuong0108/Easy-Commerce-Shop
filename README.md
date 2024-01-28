@@ -1,1 +1,2 @@
 # EasyCommerceShop
+# Database design
