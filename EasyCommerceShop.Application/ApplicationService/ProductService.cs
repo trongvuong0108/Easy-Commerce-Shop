@@ -10,12 +10,12 @@ namespace EasyCommerceShop.Application.BusinessService
             throw new NotImplementedException();
         }
 
-        public Task<IQueryable<Product>> GetAllProductsByBrand(BrandEntityConfiguration brand)
+        public Task<IQueryable<Product>> GetAllProductsByBrand(Brand brand)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IQueryable<Product>> GetAllProductsByCategoryAsync(CategoryEntityConfiguration category)
+        public Task<IQueryable<Product>> GetAllProductsByCategoryAsync(Category category)
         {
             throw new NotImplementedException();
         }

@@ -22,7 +22,7 @@
         #endregion
 
         #region RelationshipMapping
-        public List<BrandCategoryDetailEntityConfiguration> categories { get; set; }
+        public List<BrandCategoryDetail> categories { get; set; }
         public List<Product> products { get; set; }
 
         public BranchContactPoint contactPoint { get; set; }

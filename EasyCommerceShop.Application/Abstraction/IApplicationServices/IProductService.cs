@@ -5,7 +5,7 @@ namespace EasyCommerceShop.Application.Abstraction.IApplicationService
     public interface IProductService
     {
         Task<IQueryable<Product>> GetAllProductsAsync();
-        Task<IQueryable<Product>> GetAllProductsByCategoryAsync(CategoryEntityConfiguration category);
-        Task<IQueryable<Product>> GetAllProductsByBrand(BrandEntityConfiguration brand);
+        Task<IQueryable<Product>> GetAllProductsByCategoryAsync(Category category);
+        Task<IQueryable<Product>> GetAllProductsByBrand(Brand brand);
     }
 }

@@ -12,7 +12,7 @@
 
         #region RelationshipMapping
         public List<Product> Products { get; set; }
-        public List<OptionEntityConfiguration> Options { get; set; }
+        public List<Option> Options { get; set; }
         #endregion
     }
 }

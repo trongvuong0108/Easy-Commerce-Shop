@@ -18,6 +18,6 @@ namespace EasyCommerceShop.Infrastructure.Data.Entities
         public DateTime Create { get; set; } = DateTime.Now;
         public DateTime Update { get; set; } = DateTime.Now;
 
-        public BrandEntityConfiguration brand { get; set; }
+        public Brand brand { get; set; }
     }
 }
