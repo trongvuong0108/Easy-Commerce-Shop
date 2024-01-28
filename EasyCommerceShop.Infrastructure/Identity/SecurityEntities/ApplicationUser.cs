@@ -1,6 +1,8 @@
-﻿namespace EasyCommerceShop.Infrastructure.Identity.SecurityEntities
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace EasyCommerceShop.Infrastructure.Identity.SecurityEntities
 {
-    public class ApplicationUser
+    public class ApplicationUser : IdentityUser<Guid>
     {
     }
 }

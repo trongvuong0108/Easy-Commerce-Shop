@@ -19,8 +19,8 @@
         #endregion
 
         #region RelationshipMapping
-        public Brand Brand { get; set; }
-        public List<OptionCategoryDetail> OptionCategories { get; set; }    
+        //public Brand Brand { get; set; }
+        //public List<OptionCategoryDetail> OptionCategories { get; set; }    
         #endregion
     }
 }
