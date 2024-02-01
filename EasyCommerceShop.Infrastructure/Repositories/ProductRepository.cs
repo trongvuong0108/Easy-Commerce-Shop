@@ -1,9 +1,13 @@
-﻿using EasyCommerceShop.Infrastructure.Data.Entities;
+﻿using EasyCommerceShop.Infrastructure.Abstraction.IRepositories;
+using EasyCommerceShop.Infrastructure.Data.Entities;
 
 namespace EasyCommerceShop.Infrastructure.Repositories
 {
-    public class IProductRepository
+    public class ProductRepository : IProductRepository
     {
-        
+        public Task<IQueryable<Product>> GetProductsAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

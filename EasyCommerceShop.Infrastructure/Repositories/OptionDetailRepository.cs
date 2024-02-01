@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EasyCommerceShop.Infrastructure.Repositories
 {
-    public class IOptionDetailRepository
+    public class OptionDetailRepository
     {
     }
 }
