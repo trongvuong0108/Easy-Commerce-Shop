@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace EasyCommerceShop.Infrastructure.Data.Configuration
 {
-    public class OptionCategoryDetailEntityConfiguration : IEntityTypeConfiguration<OptionCategoryDetail>
+    public class OptionCategoryDetailEntityConfiguration : IEntityTypeConfiguration<OptionDetail>
     {
-        public void Configure(EntityTypeBuilder<OptionCategoryDetail> builder)
+        public void Configure(EntityTypeBuilder<OptionDetail> builder)
         {
             throw new NotImplementedException();
         }

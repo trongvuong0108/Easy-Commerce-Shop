@@ -1,6 +1,8 @@
-﻿namespace EasyCommerceShop.Infrastructure.Data.Entities
+﻿using EasyCommerceShop.Infrastructure.Abstraction;
+
+namespace EasyCommerceShop.Infrastructure.Data.Entities
 {
-    public class ShopSetting
+    public class ShopSetting : GenericEntity
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;

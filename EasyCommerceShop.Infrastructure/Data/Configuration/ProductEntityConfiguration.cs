@@ -45,6 +45,12 @@ namespace EasyCommerceShop.Infrastructure.Data.Configuration
             builder
                 .Property(s => s.IsShowOnWeb)
                 .HasDefaultValue(true);
+            builder
+                .HasMany(s => s.OptionCategories)
+                .WithOne()
+                .HasForeignKey(s=>s.ProductId)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

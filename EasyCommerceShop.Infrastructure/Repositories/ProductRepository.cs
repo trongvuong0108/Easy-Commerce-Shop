@@ -1,13 +1,13 @@
-﻿using EasyCommerceShop.Infrastructure.Abstraction.IRepositories;
+﻿using EasyCommerceShop.Infrastructure.Abstraction;
+using EasyCommerceShop.Infrastructure.Data;
 using EasyCommerceShop.Infrastructure.Data.Entities;
 
 namespace EasyCommerceShop.Infrastructure.Repositories
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : GenericRepository<Product>
     {
-        public Task<IQueryable<Product>> GetProductsAsync()
+        public ProductRepository(EasyShopDbContext dbContext) : base(dbContext)
         {
-            throw new NotImplementedException();
         }
     }
 }

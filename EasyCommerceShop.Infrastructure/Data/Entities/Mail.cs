@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EasyCommerceShop.Infrastructure.Abstraction;
 
 namespace EasyCommerceShop.Infrastructure.Data.Entities
 {
-    public class Mail
+    public class Mail : GenericEntity
     {
-        public Guid Id { get; set; }
+
         public string From  { get; set; }
         public string To  { get; set; }
         public string CC  { get; set; }

@@ -7,7 +7,10 @@ namespace EasyCommerceShop.Infrastructure.Data.Validator
     {
         public ProductVadilator() 
         {
-            RuleFor(x => x.Name).NotNull().NotEmpty().WithMessage("Thiếu tên kìa con đỉ ơi");
+            RuleFor(x => x.Name)
+                .NotNull()
+                .NotEmpty()
+                .WithMessage("Thiếu tên kìa con đỉ ơi");
         }
     }
 }

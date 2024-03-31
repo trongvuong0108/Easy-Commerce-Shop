@@ -1,11 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\EasyCommerceShop.Infrastructure\EasyCommerceShop.Infrastructure.csproj" />
+    <Compile Remove="Helper\**" />
+    <EmbeddedResource Remove="Helper\**" />
+    <None Remove="Helper\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Helper\" />
+    <ProjectReference Include="..\EasyCommerceShop.Infrastructure\EasyCommerceShop.Infrastructure.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -1,9 +1,11 @@
-﻿namespace EasyCommerceShop.Infrastructure.Data.Entities
+﻿using EasyCommerceShop.Infrastructure.Abstraction;
+
+namespace EasyCommerceShop.Infrastructure.Data.Entities
 {
-    public class Brand
+    public class Brand : GenericEntity
     {
         #region MainProperties
-        public Guid Id { get; set; }
+
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public string Address { get; set; } = string.Empty;
@@ -17,15 +19,15 @@
         public string FaxName { get; set; } = string.Empty;
         public string PhoneNumber { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
-        public DateTime Create { get; set; } = DateTime.Now;
-        public DateTime Update { get; set; } = DateTime.Now;
+
+
         #endregion
 
         #region RelationshipMapping
-        public List<BrandCategoryDetail> categories { get; set; }
-        public List<Product> products { get; set; }
+        public List<BrandCategoryDetail>? categories { get; set; }
+        public List<Product>? products { get; set; }
 
-        public BranchContactPoint contactPoint { get; set; }
+        public BranchContactPoint? contactPoint { get; set; }
         #endregion
     }
 }

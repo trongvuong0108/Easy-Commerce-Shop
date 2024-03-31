@@ -1,6 +1,8 @@
-﻿namespace EasyCommerceShop.Infrastructure.Data.Entities
+﻿using EasyCommerceShop.Infrastructure.Abstraction;
+
+namespace EasyCommerceShop.Infrastructure.Data.Entities
 {
-    public class ShoppingCart
+    public class ShoppingCart : GenericEntity
     {
     }
 }
