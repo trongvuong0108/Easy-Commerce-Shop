@@ -1,2 +1,2 @@
-# EasyCommerceShop
+# EasyLearning
 # Database design
