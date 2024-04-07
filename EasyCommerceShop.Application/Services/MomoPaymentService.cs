@@ -1,14 +1,12 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using EasyCommerceShop.Application.Abstraction.IServices;
+using Newtonsoft.Json.Linq;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 
 namespace EasyCommerceShop.Application.Services
 {
-    public interface IPaymentService
-    {
-        public Task<string> doPayment();
-    }
+    
     public class MomoPaymentService : IPaymentService
     {
         public async Task<string> doPayment()

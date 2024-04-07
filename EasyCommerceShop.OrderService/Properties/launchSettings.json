@@ -1,5 +1,15 @@
 {
   "profiles": {
+    "https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:9000;http://localhost:9001"
+    },
     "http": {
       "commandName": "Project",
       "launchBrowser": true,
@@ -9,16 +19,6 @@
       },
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5174"
-    },
-    "https": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7211;http://localhost:5174"
     },
     "IIS Express": {
       "commandName": "IISExpress",
