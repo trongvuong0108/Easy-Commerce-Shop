@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  easycommerceshop.commonservice:
+    image: ${DOCKER_REGISTRY-}easycommerceshopcommonservice
+    build:
+      context: .
+      dockerfile: EasyCommerceShop.CommonService/Dockerfile
+  easycommerceshop.applicationgateway:
+    image: ${DOCKER_REGISTRY-}easycommerceshopapplicationgateway
+    build:
+      context: .
+      dockerfile: EasyCommerceShop.ApplicationGateway/Dockerfile
+

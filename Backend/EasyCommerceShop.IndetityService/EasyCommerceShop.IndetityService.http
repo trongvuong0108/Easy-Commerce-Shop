@@ -1,0 +1,6 @@
+@EasyCommerceShop.IndetityService_HostAddress = http://localhost:5045
+
+GET {{EasyCommerceShop.IndetityService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
