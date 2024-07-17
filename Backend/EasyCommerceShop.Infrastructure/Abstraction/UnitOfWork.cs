@@ -1,5 +1,5 @@
-﻿using EasyCommerceShop.Infrastructure.Data;
-using EasyCommerceShop.Infrastructure.Repositories;
+﻿using EasyCommerceShop.Infrastructure.Repositories;
+using EasyCommerceShop.Persistence.Data;
 
 namespace EasyCommerceShop.Infrastructure.Abstraction
 {

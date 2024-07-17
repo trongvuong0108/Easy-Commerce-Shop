@@ -1,7 +1,6 @@
-﻿using EasyCommerceShop.Infrastructure.Abstraction;
-using EasyCommerceShop.Infrastructure.Data.Entities;
+﻿using EasyCommerceShop.Domain.Entities;
+using EasyCommerceShop.Infrastructure.Abstraction;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 
 namespace EasyCommerceShop.ProdcutService.Controllers
 {

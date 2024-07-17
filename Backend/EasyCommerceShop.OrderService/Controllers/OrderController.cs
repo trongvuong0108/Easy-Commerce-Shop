@@ -9,17 +9,16 @@ namespace EasyCommerceShop.ProdcutService.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        private readonly IOrderService _orderService;
+        private readonly IPaymentService _paymentService;
 
-        public OrderController(IOrderService orderService)
+        public OrderController(IPaymentService orderService)
         {
-            _orderService = orderService;
+            _paymentService = orderService;
         }
         [HttpGet]
         public async Task<EasyCommerceShopResponseBase<string>> GetPaymentLink()
         {
-            IPaymentService paymentService = new MomoPaymentService();
-            string link = await paymentService.doPayment();
+            string link = await _paymentService.doPayment();
             return new EasyCommerceShopResponseBase<string>
             {
                 dataObject = link,

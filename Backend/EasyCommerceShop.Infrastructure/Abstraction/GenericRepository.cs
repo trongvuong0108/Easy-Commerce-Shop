@@ -1,36 +1,21 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EasyCommerceShop.Domain.Abstraction;
+using EasyCommerceShop.Infrastructure.Repositories;
+using EasyCommerceShop.Persistence.Data;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using EasyCommerceShop.Domain.Abstraction;
-using EasyCommerceShop.Infrastructure.Data;
 
 namespace EasyCommerceShop.Infrastructure.Abstraction
 {
-    public interface IGenericRepository<TEntity> where TEntity : GenericEntity
+    public class GenericRepository<TEntity, TKey> : IGenericRepository<TEntity, TKey> , IDisposable, IAsyncDisposable
+        where TEntity : GenericEntity<TKey>
     {
-        Task<List<TEntity>> GetAll();
-
-        Task<List<TEntity>> GetByCondition<TResult>(Expression<Func<TEntity, bool>> selector);
-
-        Task Create(TEntity entity);
-
-        Task Update(TEntity entity);
-
-        Task Delete(TEntity entity);
-
-        Task SoftDelete(string id);
-    }
-    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : GenericEntity
-    {
-
         private readonly EasyShopDbContext _dbContext;
-
         public GenericRepository(EasyShopDbContext dbContext)
         {
             _dbContext = dbContext;
         }
-
         public async Task<List<TEntity>> GetAll() => await _dbContext.Set<TEntity>().AsNoTracking().ToListAsync();
-
+        
         public async Task<List<TEntity>> GetByCondition<TResult>(Expression<Func<TEntity, bool>> selector)
             => await _dbContext.Set<TEntity>().AsNoTracking().Where(selector).ToListAsync();
 
@@ -45,20 +30,35 @@ namespace EasyCommerceShop.Infrastructure.Abstraction
             _dbContext.Set<TEntity>().Remove(entity);
             await _dbContext.SaveChangesAsync();
         }
-        public async Task SoftDelete(string id)
+
+        public Task SoftDelete(string id)
         {
-            GenericEntity? item = await _dbContext.Set<TEntity>().FirstOrDefaultAsync(x=>x.Id == id);
-            if (item != null)
-            {
-                item.IsDeleted = true;
-            }
-            await _dbContext.SaveChangesAsync();
+            throw new NotImplementedException();
         }
+        // public async Task SoftDelete(string id)
+        // {
+        //     GenericEntity? item = await _dbContext.Set<TEntity>().FirstOrDefaultAsync(x=>x.Id == id);
+        //     if (item != null)
+        //     {
+        //         item.IsDeleted = true;
+        //     }
+        //     await _dbContext.SaveChangesAsync();
+        // }
 
         public async Task Update(TEntity entity)
         {
             _dbContext.Set<TEntity>().Update(entity);
             await _dbContext.SaveChangesAsync();
+        }
+
+        public void Dispose()
+        {
+            _dbContext.Dispose();
+        }
+
+        public async ValueTask DisposeAsync()
+        {
+            await _dbContext.DisposeAsync();
         }
     }
 }
