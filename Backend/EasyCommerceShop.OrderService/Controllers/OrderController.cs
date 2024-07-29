@@ -26,5 +26,10 @@ namespace EasyCommerceShop.ProdcutService.Controllers
                 IsSuccess = true,
             };
         }
+        //[HttpGet]
+        //public async Task<IActionResult> DownloadInvoice()
+        //{
+
+        //}
     }
 }

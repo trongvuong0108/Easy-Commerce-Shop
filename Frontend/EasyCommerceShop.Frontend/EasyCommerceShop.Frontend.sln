@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCommerceShop.Frontend", "EasyCommerceShop.Frontend\EasyCommerceShop.Frontend\EasyCommerceShop.Frontend.csproj", "{5448519A-5350-49EC-A096-AC76B32BE6EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyCommerceShop.Frontend.Client", "EasyCommerceShop.Frontend\EasyCommerceShop.Frontend.Client\EasyCommerceShop.Frontend.Client.csproj", "{49B4CF31-EE4F-488F-A2A6-99B41D0B9480}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5448519A-5350-49EC-A096-AC76B32BE6EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5448519A-5350-49EC-A096-AC76B32BE6EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5448519A-5350-49EC-A096-AC76B32BE6EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5448519A-5350-49EC-A096-AC76B32BE6EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49B4CF31-EE4F-488F-A2A6-99B41D0B9480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49B4CF31-EE4F-488F-A2A6-99B41D0B9480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49B4CF31-EE4F-488F-A2A6-99B41D0B9480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49B4CF31-EE4F-488F-A2A6-99B41D0B9480}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1FC4F15-A253-40F6-A175-A3E1CC4C03F6}
+	EndGlobalSection
+EndGlobal

@@ -17,4 +17,8 @@
     <ProjectReference Include="..\EasyCommerceShop.OrderService.Application\EasyCommerceShop.OrderService.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MailTemplate\" />
+  </ItemGroup>
+
 </Project>

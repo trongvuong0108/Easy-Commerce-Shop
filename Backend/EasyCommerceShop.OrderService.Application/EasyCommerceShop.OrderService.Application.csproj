@@ -8,10 +8,15 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Razor.Templating.Core" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EasyCommerceShop.Infrastructure\EasyCommerceShop.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MailTemplate\" />
   </ItemGroup>
 
   <PropertyGroup>
