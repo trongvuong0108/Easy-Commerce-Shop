@@ -22,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{CA0F21E2-8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCommerceShop.Test", "EasyCommerceShop.Test\EasyCommerceShop.Test.csproj", "{194C609A-4A3E-4FAA-BCE5-A34E9CFD9320}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCommerceShop.ProdcutService", "EasyCommerceShop.ProdcutService\EasyCommerceShop.ProdcutService.csproj", "{517316F2-C3A5-4730-A365-9827DB6BEB1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCommerceShop.ProductService", "EasyCommerceShop.ProductService\EasyCommerceShop.ProductService.csproj", "{517316F2-C3A5-4730-A365-9827DB6BEB1B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyCommerceShop.OrderService", "EasyCommerceShop.OrderService\EasyCommerceShop.OrderService.csproj", "{41C501DD-FFE2-4BD2-9857-2A1F97B00322}"
 EndProject

@@ -5,10 +5,10 @@ namespace EasyCommerceShop.Domain.Entities
     public class Mail : GenericEntity<int>
     {
 
-        public string From  { get; set; }
-        public string To  { get; set; }
-        public string CC  { get; set; }
-        public string Subject  { get; set; }
-        public string Content  { get; set; }
+        public string From  { get; set; } = string.Empty;
+        public string To { get; set; } = string.Empty;
+        public string CC { get; set; } = string.Empty;
+        public string Subject  { get; set; } = string.Empty;
+        public string Content { get; set; } = string.Empty;
     }
 }

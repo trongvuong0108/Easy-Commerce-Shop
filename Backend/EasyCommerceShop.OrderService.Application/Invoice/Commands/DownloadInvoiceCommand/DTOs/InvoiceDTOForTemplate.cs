@@ -2,7 +2,7 @@
 {
     public class InvoiceDTOForTemplate
     {
-        public string id { set; get; }
-        public string name { set; get; }
+        public string id { set; get; } = string.Empty;
+        public string name { set; get; } = string.Empty;
     }
 }

@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace EasyCommerceShop.Infrastructure.Abstraction
 {
-    public class GenericRepository<TEntity, TKey> : IGenericRepository<TEntity, TKey> , IDisposable, IAsyncDisposable
+    public class GenericRepository<TEntity, TKey> : IGenericRepository<TEntity, TKey>, IDisposable, IAsyncDisposable
         where TEntity : GenericEntity<TKey>
     {
         private readonly EasyShopDbContext _dbContext;
@@ -14,36 +14,20 @@ namespace EasyCommerceShop.Infrastructure.Abstraction
         {
             _dbContext = dbContext;
         }
-        public async Task<List<TEntity>> GetAll() => await _dbContext.Set<TEntity>().AsNoTracking().ToListAsync();
-        
+        public async Task<List<TEntity>> GetAll() => await _dbContext.Set<TEntity>().Where(x=> !x.IsDeleted).AsNoTracking().ToListAsync();
+
+        public async Task<List<TEntity>> GetWithDelete() => await _dbContext.Set<TEntity>().AsNoTracking().ToListAsync();
+
         public async Task<List<TEntity>> GetByCondition<TResult>(Expression<Func<TEntity, bool>> selector)
             => await _dbContext.Set<TEntity>().AsNoTracking().Where(selector).ToListAsync();
 
-        public async Task Create(TEntity entity)
-        {
-            await _dbContext.Set<TEntity>().AddAsync(entity);
-            await _dbContext.SaveChangesAsync();
-        }
+        public async Task Create(TEntity entity) => await _dbContext.Set<TEntity>().AddAsync(entity);
 
-        public async Task Delete(TEntity entity)
-        {
-            _dbContext.Set<TEntity>().Remove(entity);
-            await _dbContext.SaveChangesAsync();
-        }
+        public async Task<int> Delete(TKey id) => 
+            await _dbContext.Set<TEntity>().Where(x => x.Id.Equals(id)).ExecuteDeleteAsync();
 
-        public Task SoftDelete(string id)
-        {
-            throw new NotImplementedException();
-        }
-        // public async Task SoftDelete(string id)
-        // {
-        //     GenericEntity? item = await _dbContext.Set<TEntity>().FirstOrDefaultAsync(x=>x.Id == id);
-        //     if (item != null)
-        //     {
-        //         item.IsDeleted = true;
-        //     }
-        //     await _dbContext.SaveChangesAsync();
-        // }
+        public async Task<int> SoftDelete(TKey id) =>
+            await _dbContext.Set<TEntity>().Where(x => x.Id.Equals(id)).ExecuteUpdateAsync(record => record.SetProperty(y => y.IsDeleted, true));
 
         public async Task Update(TEntity entity)
         {

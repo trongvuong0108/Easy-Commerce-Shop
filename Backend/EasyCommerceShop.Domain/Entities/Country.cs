@@ -12,6 +12,6 @@ namespace EasyCommerceShop.Domain.Entities
         public string CountryCode {  get; set; } = string.Empty;
         public float tax { get; set; }
 
-        public virtual List<CountryLanguageDetail> Languages { get; set; }
+        public virtual List<CountryLanguageDetail>? Languages { get; set; }
     }
 }

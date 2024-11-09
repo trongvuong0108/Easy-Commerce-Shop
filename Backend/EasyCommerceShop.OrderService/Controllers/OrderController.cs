@@ -21,7 +21,7 @@ namespace EasyCommerceShop.ProdcutService.Controllers
             string link = await _paymentService.doPayment();
             return new EasyCommerceShopResponseBase<string>
             {
-                dataObject = link,
+                DataObject = link,
                 Status = 200,
                 IsSuccess = true,
             };

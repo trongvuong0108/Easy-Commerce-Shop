@@ -2,8 +2,11 @@
 
   <ItemGroup>
     <Compile Remove="Helper\**" />
+    <Compile Remove="MailTemplate\**" />
     <EmbeddedResource Remove="Helper\**" />
+    <EmbeddedResource Remove="MailTemplate\**" />
     <None Remove="Helper\**" />
+    <None Remove="MailTemplate\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -13,10 +16,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EasyCommerceShop.Infrastructure\EasyCommerceShop.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="MailTemplate\" />
   </ItemGroup>
 
   <PropertyGroup>

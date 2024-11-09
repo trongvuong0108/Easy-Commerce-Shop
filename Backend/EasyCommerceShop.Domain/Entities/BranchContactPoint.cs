@@ -14,6 +14,6 @@ namespace EasyCommerceShop.Domain.Entities
 
 
 
-        public Brand brand { get; set; }
+        public Brand? brand { get; set; }
     }
 }
